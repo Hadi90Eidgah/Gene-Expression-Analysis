@@ -6,12 +6,12 @@ Additionaly, using this pipeline one can quantify the Transposable Elements expr
 
 The pipeline includes: reads quality control, preprocessing (trimming and removing rRNA) , alignment and quantification.
 
-### Nextflow Installation
+## Nextflow Installation
 ---
 Nextflow can be installed in any Conda Environment with `conda install -c bioconda nextflow=22.08.`.
 Alternatively,`curl https://get.nextflow.io | bash`. In this case, run Nextflow as `./nextflow run`.
 
-### Getting Started:
+## Getting Started:
 ---
 To run Nextflow, samples and their location must be specified in a csv file. 
 
@@ -26,7 +26,7 @@ The **input.csv** must be generated, comma separated, in the following way, havi
 
 An example csv file is provided and can be found [here](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/input.csv).
 
-### Which and Where:
+## Which and Where:
 
 | Directory    | file  | function  |
 | ------------- |-------------| -----|
@@ -68,3 +68,27 @@ Edit star_align.nf to define custom parameters.
 8. **Quantification of Transposable Elements** ([TECOUNT](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/tecount.nf))
 Script to count reads mapping on Transposable Elements subfamilies, families and classes. Requires Python 3, samtools and bedtools.
 Default = RUN
+
+
+## How to Run the Pipeline:
+
+Activate your nextflow conda environment with `conda activate nameCondaEnv`, then:
+
+```
+nextflow -C nextflow.config run main.nf \
+         --input /path/to/input.csv \
+         -w /path/to/work_dir \
+         --outdir /path/to/your/results \
+         -profile singularity \
+         -resume -bg 
+```
+
+**Note:**
+The Pipeline assumes by default a **Paired-End** library. To work with Single-End files: `--single_end true`.
+
+## List of Params:
+
+Parameter | Default Value | Alternative Value | function
+--- | --- | --- | --- 
+-C | Must be defined if there is no config file in the same directory | - | defines the path of the main nextflow.config file
+1 | 2 | 3
