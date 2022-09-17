@@ -28,10 +28,10 @@ An example csv file is provided and can be found [here](https://github.com/Hadi9
 
 ## Which and Where:
 
-| Directory        | file           | function  |
-| ------------- |:-------------:| -----|
+| Directory    | file  | function  |
+| ------------- |-------------| -----|
 | ./assets      | [human_ribosomal.fa](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/assets/human_ribosomal.fa) | Common ribosomal 31-mers for BBDuk |
-| ./assets      | centered      |   $12 |
-| ./conf | are neat      |    $1 |
+| ./assets      | [multiqc_config.yaml](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/assets/multiqc_config.yaml)    |MultiQC configuration file|
+| ./conf | [base.config](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/conf/base.config)     |    Configuration file to execute the pipeline with HPC Slurm:Workload Manager  |
 | ./conf
 | ./modules
