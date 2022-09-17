@@ -1,4 +1,4 @@
-# Gene-Expr-Analysis
+# Gene-Expr. Analysis
 Gene Expr. by  Nextflow automation program.
 
 The basic aim of the pipeline is to align (paired/single)_end reads to GENCODE - Human Release v.41 and further downstream analysis (i.e quantification of genes, DESeq analysis, PCA, HCL, etc ...)
