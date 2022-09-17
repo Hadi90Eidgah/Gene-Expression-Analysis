@@ -26,7 +26,7 @@ The **input.csv** must be generated, comma separated, in the following way, havi
 
 An example csv file is provided and can be found [here](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/input.csv).
 
-## Which and Where:
+### Which and Where:
 
 | Directory    | file  | function  |
 | ------------- |-------------| -----|
@@ -37,3 +37,7 @@ An example csv file is provided and can be found [here](https://github.com/Hadi9
 | ./modules | all the modules.nf | Modules to run the pipeline, the workflow is described below |
 |./ | [main.nf](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/main.nf) | Main nextflow script
 | ./ | [nextflow.config](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/nextflow.config) | Nextflow configuration file containing all the parameters and profile needed to run the pipeline
+
+
+
+## Workflow:
