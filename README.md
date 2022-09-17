@@ -41,3 +41,30 @@ An example csv file is provided and can be found [here](https://github.com/Hadi9
 
 
 ## Workflow:
+
+1. **Reads concatenation** ([CONCAT](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/concat_reads.nf)) Default = Run, skipped automatically if not needed
+
+
+2. **FASTQ data pre-processing** ([FASTP](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/fastp.nf)) quality control, trimming of adapters, filtering by quality, and read pruning. Default = Run
+
+
+3. **Decontamination Using Kmers** ([BBDuk](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/bbduk.nf)) Search for contaminant sequences, part of the BBTools package. Default = Run
+
+4. **Overview of quality control metrics** ([FASTQC](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/fastqc.nf)). Default = Run
+
+
+5. **Detection of library contamination** ([FASTQSCREEN](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/fastqscreen.nf)). Default = Run
+
+
+6. **STAR indexing** (STAR_INDEX) Default = Skip 
+STAR Index already provided. To create a custom STAR Index: 
+provide genome (fasta) and annotation (gtf) in ./main.nf, and --star_idxist false.
+
+
+7. **STAR alignment** ([STAR_ALIGN](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/star_align.nf)) Default = Run 
+Edit star_align.nf to define custom parameters.
+
+
+8. **Quantification of Transposable Elements** ([TECOUNT](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/modules/tecount.nf))
+Script to count reads mapping on Transposable Elements subfamilies, families and classes. Requires Python 3, samtools and bedtools.
+Default = RUN
