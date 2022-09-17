@@ -18,8 +18,8 @@ process TECOUNT {
     TEcount --version | sed 's/TEcount //' > tecount.version.txt
     TEcount \\
       -b ${bam} \\
-      -r ${rmsk} \\
-      --overlap 10 \\
+      -rl ${rmsk} \\
+      --overlap 20 s+ 10 \\
       --threads ${task.cpus}
     """
 }
