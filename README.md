@@ -25,3 +25,13 @@ The **input.csv** must be generated, comma separated, in the following way, havi
 | sample ... | ... |(*if single-end, leave this field blank*)|forward / reverse / unstranded|
 
 An example csv file is provided and can be found [here](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/input.csv).
+
+## Which and Where:
+
+| Directory        | file           | function  |
+| ------------- |:-------------:| -----|
+| ./assets      | [human_ribosomal.fa](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/assets/human_ribosomal.fa) | Common ribosomal 31-mers for BBDuk |
+| ./assets      | centered      |   $12 |
+| ./conf | are neat      |    $1 |
+| ./conf
+| ./modules
