@@ -16,7 +16,7 @@ log.info """\
     """
     .stripIndent()
 
-
+include {CONCAT_READS} from './modules/concat_reads'
 include {FASTP} from './modules/fastp'
 include {BBDUK} from './modules/bbduk'
 include {FASTQC} from './modules/fastqc'
