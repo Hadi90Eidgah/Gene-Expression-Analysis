@@ -33,5 +33,7 @@ An example csv file is provided and can be found [here](https://github.com/Hadi9
 | ./assets      | [human_ribosomal.fa](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/assets/human_ribosomal.fa) | Common ribosomal 31-mers for BBDuk |
 | ./assets      | [multiqc_config.yaml](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/assets/multiqc_config.yaml)    |MultiQC configuration file|
 | ./conf | [base.config](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/conf/base.config)     |    Configuration file to execute the pipeline with HPC Slurm:Workload Manager  |
-| ./conf
-| ./modules
+| ./conf | [fastq_screen.conf](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/conf/fastq_screen.config)| Fastqscreen configuration file
+| ./modules | all the modules.nf | Modules to run the pipeline, the workflow is described below |
+|./ | [main.nf](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/main.nf) | Main nextflow script
+| ./ | [nextflow.config](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/nextflow.config) | Nextflow configuration file containing all the parameters and profile needed to run the pipeline
