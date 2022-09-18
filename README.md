@@ -90,5 +90,12 @@ The Pipeline assumes by default a **Paired-End** library. To work with Single-En
 
 Parameter | Default Value | Alternative Value | function
 --- | --- | --- | --- 
--C | Must be defined if there is no config file in the same directory | - | defines the path of the main nextflow.config file
-1 | 2 | 3
+-C | when defined, any other config file will be overwritten | can be a file in the root directory e.g. [nextflow.config](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/nextflow.config) | defines the path of the main nextflow.config file
+--input | must be defined  | can be defined inside [main.nf](https://github.com/Hadi90Eidgah/Gene-Expression-Analysis/blob/main/main.nf) (line 29 of the script) | defines the path of the input.csv samplesheet
+-w | must be defined | nextflow defines it in root directory of the pipeline | defines the path of the Nextflow work directory
+--outdir | ./results | - | defines the path where results will be saved separately from work directory
+-bg | optional, but recommended | - | parameter to run Nextflow in background, prevents a broken pipeline in case of disconnection
+-resume | - | - | allows for the continuation of a workflow execution
+
+**Important:**  disabling certain processes could cause fatal errors (downstream steps may require previously generated files). 
+For instance, STAR is required to perform most of the subsequent processes.
